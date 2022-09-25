@@ -1,0 +1,105 @@
+html {
+    padding: env(safe-area-inset);
+}
+html, body {
+    overflow-x: hidden;
+}
+
+#cf4a img {
+    animation-name: cf4FadeInOut;
+    animation-timing-function: ease-in-out;
+/* if you only want to cycle a finite amount of times, 
+   simply change 'infinite' with # of iterations you need */
+    animation-iteration-count: infinite; 
+    animation-duration: 14s;
+    /* animation-direction: alternate; not strictly necessary */
+    // position:absolute;
+}
+  
+#cf4a img:nth-of-type(1) {
+	animation-delay: 7s;
+}
+#cf4a img:nth-of-type(2) {
+	animation-delay: 0;
+}
+// #cf4a img:nth-of-type(3) {
+// 	animation-delay: 5s;
+// }
+// #cf4a img:nth-of-type(4) {
+// 	animation-delay: 0;
+// }
+
+
+@keyframes cf4FadeInOut {
+	0% {
+		opacity:1;
+	}
+	50% {
+		opacity:0;
+	}
+	100% {
+		opacity:1;
+	}
+}
+
+img.bg {
+    padding: env(safe-area-inset);
+    overflow-x: hidden;
+    /* Set rules to fill background */
+    min-height: 100%;
+    min-width: 1500px;
+    /* Set up proportionate scaling */
+    width: 100%;
+    height: auto;
+    /* Set up positioning */
+    position: absolute;
+    top: 0;
+    left: 0;
+    user-drag: none;
+    -webkit-user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+.logo {
+    position: fixed; /* or absolute */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 41%;
+}
+
+@media only screen and (max-width: 1919px) {
+    .logo {
+        width: 44%;
+    }
+}
+  
+@media only screen and (max-width: 650px) {
+    body {
+        height: 100%;
+        margin: 0;
+    }
+    img.bg {
+        padding: env(safe-area-inset);
+        /* Set rules to fill background */
+        min-height: 2000px;
+        min-width: 2043px;
+    }
+    .logo {
+        width: 90%;
+    }
+}
+
+// @media only screen and (max-height: 414px) and (orientation: landscape) {
+//     .logo {
+//         width: 35%;
+//     }
+// }
+  
+  /*# sourceMappingURL=style.css.map */
+  
